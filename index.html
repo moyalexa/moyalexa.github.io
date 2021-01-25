@@ -60,15 +60,22 @@ h1{
 }
 
 
+  
 
+.bg {
+  /* The image used */
+  background-image: url("x.gif");
 
-#myVideo {
-  position: absolute;
-  left: 675px;
-  top: 175px;
-  min-width: 30%;
-  min-height: 20%;
+  /* Full height */
+  height: 70%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+  
+ 
 
 
 </style>
@@ -94,9 +101,7 @@ h1{
     <h1><span style="font-size:120px">A L E X A</span></h1>
 
 
-<video autoplay muted loop id="myVideo">
-  <source src="x.mp4" type="video/mp4">
-</video>
+<div class="bg"></div>
 
 </div>
 
