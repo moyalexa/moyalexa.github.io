@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html><head>
-
-            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-        <link href="styles.css" rel="stylesheet">
-        <title>HOME</title>
-
+<html>
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
 <style>
+
+body {
+  background: white;
+}
+
+
 
 
 .dropbtn {
   background-color: transparent;
-  color: grey;
-
+  color: black;
+  padding: 16px;
   font-size: 30px;
   border: none;
+  cursor: pointer;
+  position: left;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: transparent;
 }
 
 .dropdown {
@@ -29,96 +33,41 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: white;
   min-width: 160px;
+  overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  color: black;
+  color: grey;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown a:hover {background-color: #ddd;}
 
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.show {display: block;}
 
 
 
 
-
-body, html {
-  height: 100%;
-  margin: 0;
-  font: 400 15px/1.8 "Lato", sans-serif;
-  color: #777;
-}
-
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  position: relative;
-  opacity: 0.65;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
-.bgimg-1 {
-  background-image: url("surf.jpg");
-  height: 100%;
-}
-
-
-
-.caption {
-  position: absolute;
-  left: 0;
-  top: 60%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
-
-
-.caption {
-  color: white;
-  font-size: 25px;
-  letter-spacing: 10px;
-
-}
-
-
-}
-
-
-.fa {
-  padding: 50px;
-  font-size: 50px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
-
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-instagram {
-  background: transparent;
+h1{
   color: black;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.fa-instagram{
+
+
+
+#myVideo {
   position: absolute;
-  bottom: 8px;
-  right: 16px;
-  font-size: 18px;
+  left: 675px;
+  top: 175px;
+  min-width: 30%;
+  min-height: 20%;
 }
 
 
@@ -126,24 +75,59 @@ body, html {
 </head>
 <body>
 
-<div class="bgimg-1">
-    <div class="dropdown">
-          <button class="dropbtn"> =  </button>
-              <div class="dropdown-content">
-                <a href="https://moyalexa.github.io/">HOME</a>
-                <a href="https://moyalexa.github.io/optometry.html">OPTOMETRY</a>
-                <a href="#">Link 3</a>
-              </div>
-    </div>
 
-  <div class="caption">
-      ALEXA
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">=</button>
+  <div id="myDropdown" class="dropdown-content">
+        <a href="https://ide-bf6a766c8dc04b7ebaceb3ced2a20fa2-8080.cs50.xyz/index.html">HOME</a>
+        <a href="https://ide-bf6a766c8dc04b7ebaceb3ced2a20fa2-8080.cs50.xyz/optometry.html">OPTOMETRY</a>
+        <a href="https://ide-bf6a766c8dc04b7ebaceb3ced2a20fa2-8080.cs50.xyz/HOBBIES3.html">HOBBIES</a>
   </div>
+</div>
 
-  <a href="https://www.instagram.com/a.j.moy/" class="fa fa-instagram"></a>
 
+
+
+
+<div style="text-align:center">
+    <h1><span style="font-size:120px">A L E X A</span></h1>
+
+
+<video autoplay muted loop id="myVideo">
+  <source src="xcolor.mp4" type="video/mp4">
+</video>
 
 </div>
 
 
-</body></html>
+</body>
+
+
+<script>
+
+
+
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
+
+</html>
