@@ -14,12 +14,12 @@
 
 
 <style>
-  
+
  @viewport {
   width: device-width ;
   zoom: 1.0 ;
 }
-  
+
 body, html {
   height: 100%;
   margin: 0;
@@ -443,6 +443,15 @@ img {
     margin: auto;
   }
 }
+
+
+
+
+
+.mySlides {display:none;}
+
+
+
 </style>
 </head>
 <body>
@@ -731,15 +740,53 @@ img {
 
 </section>
 
+<h1 class="xlarge-font" style="color:transparent;"><b>hello</b></h1>
+<h1 class="xlarge-font" style="color:transparent;"><b>hello</b></h1>
+<h1 class="xlarge-font" style="color:transparent;"><b>hello</b></h1>
+<h1 class="xlarge-font" style="color:transparent;"><b>hello</b></h1>
+<h1 class="xlarge-font" style="color:transparent;"><b>hello</b></h1>
+
+</section>
+
+</div>
+
+</section>
+
+
+<p></p>
+</section>
+
+</div>
+
+</section>
+
 
 
 
 
 <section id="other">
-    <p><span style="font-size:30px">Other</span></p>
-</section>
+<div class="container" style="background-color: white">
+          <h4 style="text-align:center">Other</h4>
+</div>
 
 
+
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="grad2.jpg" style="width:100%">
+  <img class="mySlides" src="grad1.jpg" style="width:100%">
+  <img class="mySlides" src="img_mountains.jpg" style="width:100%">
+  <img class="mySlides" src="img_forest.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<h1 class="xlarge-font" style="color:transparent;"><b>hello</b></h1>
+<h1 class="xlarge-font" style="color:transparent;"><b>hello</b></h1>
+<h1 class="xlarge-font" style="color:transparent;"><b>hello</b></h1>
+<h1 class="xlarge-font" style="color:transparent;"><b>hello</b></h1>
+<h1 class="xlarge-font" style="color:transparent;"><b>hello</b></h1>
 
 
 <script>
@@ -898,6 +945,26 @@ window.onclick = function(event) {
 }
 
 
+
+
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
 
 
 </script>
